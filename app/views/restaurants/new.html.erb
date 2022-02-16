@@ -1,0 +1,9 @@
+<h1>Add new restaurant</h1>
+
+<% categories = ["chinese", "italian", "japanese", "french", "belgian"] %>
+<%= simple_form_for @restaurant do |f| %>
+  <%= f.input :name, label: 'Restaurant name', error: 'Name required' %>
+  <%= f.input :address, label: 'Restaurant address', error: 'Address required' %>
+  <%= f.input :category, collection: categories, label: 'Choose category', error: 'Category required' %>
+  <%= f.button :submit %>
+<% end %>
