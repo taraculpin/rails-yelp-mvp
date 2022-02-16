@@ -9,5 +9,5 @@
 
 <h2>Reviews</h2>
 <% @restaurant.reviews.each do |review| %>
-  <li><%= review.content %> - <%= review.rating %></li>
+  <li><%= review.content %> -  <%= '🦞' * review.rating.to_i %></li>
 <% end %>
